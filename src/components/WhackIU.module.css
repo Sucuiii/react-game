@@ -1,0 +1,102 @@
+/* src/components/WhackIU.module.css */
+.container {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background-color: #f7f8fa;
+  border-radius: 15px;
+  width: fit-content;
+  margin: 50px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 36px;
+  color: #f06292;
+  margin-bottom: 20px;
+}
+
+.scoreboard {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.missCount {
+  font-size: 18px;
+  color: #ff7043;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #e1e1e1;
+  transform: scale(1.1);
+}
+
+.cell.active {
+  background-color: #ffcccb;
+}
+
+.cell img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.gameOverText {
+  font-size: 24px;
+  color: #d32f2f;
+  margin: 20px 0;
+}
+
+.gameOverButton {
+  background-color: #f06292;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.gameOverButton:hover {
+  background-color: #c2185b;
+}
+
+.restartButton {
+  background-color: #81c784;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.restartButton:hover {
+  background-color: #66bb6a;
+}
