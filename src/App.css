@@ -1,8 +1,78 @@
+:root {
+  --bg-color: #f0f4f8;
+  --card-bg: #ffffff;
+  --primary: #4CAF50;
+  --primary-dark: #388e3c;
+  --text-color: #2c3e50;
+  --subtext-color: #555;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background-color: var(--bg-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--subtext-color);
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 2em;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+img {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
 
 .logo {
@@ -11,9 +81,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -31,10 +103,6 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
